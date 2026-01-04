@@ -293,7 +293,7 @@ const App: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})` }}
-                className="flex items-center justify-center text-white w-full py-5 px-8 md:px-10 rounded-full font-bold text-base md:text-lg hover:brightness-105 transition-all active:scale-[0.98] shadow-[0_15px_30px_rgba(142,148,242,0.3)]"
+                className="flex items-center justify-center text-white w-full py-5 px-4 md:px-10 rounded-full font-bold text-[13px] xs:text-sm md:text-lg whitespace-nowrap hover:brightness-105 transition-all active:scale-[0.98] shadow-[0_15px_30px_rgba(142,148,242,0.3)]"
               >
                 前往居筆 Line@ 免費獲取完整報告
               </a>
