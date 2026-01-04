@@ -261,26 +261,39 @@ const App: React.FC = () => {
               })}
             </div>
 
-            <div className="bg-gradient-to-b from-white to-[#f3f5ff] rounded-[3rem] p-12 text-center border border-white shadow-2xl">
+            {/* 最下方引導卡片 */}
+            <div className="bg-gradient-to-b from-white to-[#f3f5ff] rounded-[3rem] p-8 md:p-12 text-center border border-white shadow-2xl">
               <h3 className="text-2xl font-bold mb-6 mt-6" style={{ color: textColor }}>開啟 2026 的內在探尋</h3>
-              <p className="text-[#8c91b5] text-sm mb-10 leading-relaxed font-light">
-                此刻的覺察，已在潛意識播下種子。<br />
-                完整的「2026 靈魂圖像報告」將為你解讀：<br />
-                那些隱藏在排名背後，你的天賦、狀態、動力與內在覺察。<br /><br />
-                
-                <strong>請牢記你的代碼，點擊下方按鈕加Line<br />
-                然後傳送「報告」即可查看專屬解析報告！</strong>
-              </p>
-              <div className="bg-white/80 backdrop-blur-sm py-5 px-10 rounded-[2rem] border border-[#8e94f2]/10 mb-10 inline-block">
+              <div className="text-[#8c91b5] text-sm mb-10 leading-relaxed font-light space-y-2">
+                <p>此刻的覺察，已在潛意識播下種子。</p>
+                <p>完整的「2026 靈魂圖像報告」將為你解讀：</p>
+                <p>那些隱藏在排名背後，你的天賦、狀態、動力與內在覺察。</p>
+                <p>傳送靈魂代碼到居筆官方line，讓我們陪伴你開啟這段旅程。</p>
+              </div>
+
+              {/* 高亮操作說明 */}
+              <div className="bg-[#f0f2ff] rounded-2xl p-6 mb-10 border border-[#8e94f2]/20 relative">
+                <div className="absolute -top-3 left-6 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-[#8e94f2] border border-[#8e94f2]/20 shadow-sm uppercase tracking-widest">
+                  Action Steps
+                </div>
+                <div className="text-[#5a5d8f] text-sm leading-relaxed space-y-1">
+                  <p>請牢記你的代碼，點擊下方按鈕加 Line</p>
+                  <p>然後傳送<span className="font-bold text-[#8e94f2] bg-white px-2 py-0.5 rounded mx-1">「報告」</span></p>
+                  <p>即可查看專屬解析報告</p>
+                </div>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm py-5 px-10 rounded-[2rem] border border-[#8e94f2]/10 mb-10 inline-block shadow-sm">
                 <span className="text-[9px] text-[#b0b4d4] block mb-2 uppercase tracking-[0.4em]">Inner ID</span>
                 <span className="text-4xl font-mono font-bold tracking-wider text-[#7a81e0]">{soulNumber}</span>
               </div>
+
               <a
                 href={`${LINE_LINK}?text=我的靈魂代碼是：${soulNumber}，我想開啟 2026 深度覺察報告！`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})` }}
-                className="flex items-center justify-center gap-3 text-white w-full py-5 rounded-full font-bold text-lg hover:brightness-105 transition-all active:scale-[0.98] shadow-[0_15px_30px_rgba(142,148,242,0.3)]"
+                className="flex items-center justify-center text-white w-full py-5 px-8 md:px-10 rounded-full font-bold text-base md:text-lg hover:brightness-105 transition-all active:scale-[0.98] shadow-[0_15px_30px_rgba(142,148,242,0.3)]"
               >
                 前往居筆 Line@ 免費獲取完整報告
               </a>
