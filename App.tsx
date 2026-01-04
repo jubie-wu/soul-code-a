@@ -237,8 +237,8 @@ const App: React.FC = () => {
                         <h4 className={`text-lg font-bold tracking-wide ${isLocked ? 'text-[#8a8fa3]' : 'text-[#5a5d8f]'}`}>
                           {config.title}
                         </h4>
-                        {/* 渲染順位副標說明 */}
-                        <p className={`text-[11px] mt-1 font-light leading-relaxed ${isLocked ? 'text-[#b0b4d4]' : 'text-[#8c91b5]'}`}>
+                        {/* 渲染順位副標說明 - 調整文字大小為 text-[13px] 以提升手機閱讀舒適度 */}
+                        <p className={`text-[13px] mt-1.5 font-normal leading-relaxed ${isLocked ? 'text-[#b0b4d4]' : 'text-[#8c91b5]'}`}>
                           {config.description}
                         </p>
                         
