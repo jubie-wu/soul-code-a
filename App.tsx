@@ -237,8 +237,12 @@ const App: React.FC = () => {
                         <h4 className={`text-lg font-bold tracking-wide ${isLocked ? 'text-[#8a8fa3]' : 'text-[#5a5d8f]'}`}>
                           {config.title}
                         </h4>
+                        {/* 渲染順位副標說明 */}
+                        <p className={`text-[11px] mt-1 font-light leading-relaxed ${isLocked ? 'text-[#b0b4d4]' : 'text-[#8c91b5]'}`}>
+                          {config.description}
+                        </p>
+                        
                         <div className={`mt-4 flex items-center gap-4 sm:gap-5 transition-all duration-1000 ${isLocked ? 'blur-locked' : ''}`}>
-                          {/* 調整圖形尺寸為 w-16，避免壓迫文字但保持清晰 */}
                           <div className={`w-16 h-16 sm:w-14 sm:h-14 shrink-0 ${isLocked ? 'text-[#b0b4d4]' : shape.color.split(' ')[1]}`}>
                             {shape.icon}
                           </div>

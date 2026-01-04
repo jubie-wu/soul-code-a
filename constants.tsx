@@ -56,7 +56,7 @@ export const SHAPES: ShapeInfo[] = [
 
 export const RANK_CONFIG: RankData[] = [
   {
-    title: '第一位：核心生命動能',
+    title: '第一順位：核心生命動能',
     description: '這代表你靈魂深處最迫切的渴望，也是驅動你所有行為的潛意識原動力。',
     mappings: {
       circle: '追求靈魂的絕對主導權，在獨立中守護自我邊界',
@@ -67,7 +67,7 @@ export const RANK_CONFIG: RankData[] = [
     }
   },
   {
-    title: '第二位：潛藏天賦資源',
+    title: '第二順位：潛藏天賦資源',
     description: '這是你與生俱來的內在優勢，常在你最放鬆或面臨挑戰時不經意流露。',
     mappings: {
       circle: '擁有無所畏懼的獨行勇氣，能從孤獨中萃取強大的創造力',
@@ -78,7 +78,7 @@ export const RANK_CONFIG: RankData[] = [
     }
   },
   {
-    title: '第三位：當前生命狀態',
+    title: '第三順位：當前生命狀態',
     description: '這反映了你現階段如何與世界互動，以及你目前最關注的生活層面。',
     mappings: {
       circle: '正處於重塑邊界的過程，努力在繁雜關係中切割出自由空間',
@@ -89,7 +89,7 @@ export const RANK_CONFIG: RankData[] = [
     }
   },
   {
-    title: '第四位：靈魂修復能源',
+    title: '第四順位：靈魂修復能源',
     description: '當你感到疲憊或能量枯竭時，這是能讓你重新獲得支持與修復的關鍵路徑。',
     mappings: {
       circle: '徹底的獨處與封閉空間，能讓你的感官與思緒得到洗滌',
@@ -100,7 +100,7 @@ export const RANK_CONFIG: RankData[] = [
     }
   },
   {
-    title: '第五位：潛意識避風港（逃避區）',
+    title: '第五順位：潛意識避風港（逃避區）',
     description: '這是你壓力下最想躲開的事物，也可能是你目前生命中最不敢直視的陰影。',
     mappings: {
       circle: '恐懼失去掌控權，將任何形式的「依賴他人」視為靈魂束縛',
