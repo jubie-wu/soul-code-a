@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ShapeId, Stage } from './types';
 import { SHAPES, RANK_CONFIG, LINE_LINK } from './constants';
@@ -127,8 +126,8 @@ const App: React.FC = () => {
 
         {stage === 'sorting' && (
           <div className="animate-in fade-in zoom-in-95 duration-500">
-            <div className="bg-white/90 backdrop-blur-xl rounded-[2.5rem] shadow-xl p-8 border border-white mb-6">
-              <div className="text-center mb-10">
+            <div className="bg-white/90 backdrop-blur-xl rounded-[2.5rem] shadow-xl p-5 md:p-10 border border-white mb-6">
+              <div className="text-center mb-8">
                 <span className="bg-[#f3f5ff] text-[#8e94f2] px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-[#8e94f2]/10">
                   直覺圖像排序測驗
                 </span>
@@ -137,7 +136,7 @@ const App: React.FC = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mb-12">
                 {SHAPES.map((shape) => {
                   const rank = selection.indexOf(shape.id) + 1;
                   const isSelected = rank > 0;
@@ -145,18 +144,18 @@ const App: React.FC = () => {
                     <button
                       key={shape.id}
                       onClick={() => handleShapeClick(shape.id)}
-                      className={`relative aspect-square rounded-[2rem] p-6 transition-all duration-500 flex flex-col items-center justify-center border-2 
+                      className={`relative aspect-square rounded-[2rem] p-4 md:p-8 transition-all duration-500 flex flex-col items-center justify-center border-2 
                         ${isSelected 
                           ? `bg-white border-[${shape.color.split(' ')[1].replace('text-', '')}] shadow-[0_15px_30px_rgba(0,0,0,0.05)] scale-95` 
                           : 'bg-[#fafaff] border-transparent hover:bg-white hover:border-[#8e94f2]/20'
                         }`}
                     >
-                      <div className={`w-14 h-14 md:w-16 md:h-16 transition-all duration-500 ${isSelected ? 'opacity-10 blur-[2px]' : shape.color.split(' ')[1]}`}>
+                      <div className={`w-20 h-20 md:w-24 md:h-24 transition-all duration-500 ${isSelected ? 'opacity-10 blur-[2px]' : shape.color.split(' ')[1]}`}>
                         {shape.icon}
                       </div>
                       {isSelected && (
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-5xl font-bold italic" style={{ color: primaryColor }}>{rank}</span>
+                          <span className="text-6xl md:text-7xl font-bold italic" style={{ color: primaryColor }}>{rank}</span>
                         </div>
                       )}
                       <span className="mt-4 text-[10px] font-bold text-[#b0b4d4] tracking-widest uppercase">{shape.name}</span>
@@ -222,12 +221,12 @@ const App: React.FC = () => {
                 return (
                   <div 
                     key={index} 
-                    className={`bg-white/70 backdrop-blur-md rounded-[2rem] p-7 border transition-all duration-700 relative overflow-hidden
+                    className={`bg-white/70 backdrop-blur-md rounded-[2rem] p-4 sm:p-7 border transition-all duration-700 relative overflow-hidden
                       ${isLocked ? 'border-white/50 opacity-90' : 'border-[#8e94f2] shadow-xl scale-[1.02]'}
                     `}
                     style={{ borderColor: isLocked ? undefined : primaryColor }}
                   >
-                    <div className="flex items-start gap-6">
+                    <div className="flex items-start gap-3 sm:gap-6">
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shrink-0
                         ${isLocked ? 'bg-white text-[#b0b4d4]' : 'text-white'}`}
                         style={{ background: isLocked ? undefined : `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})` }}
@@ -238,18 +237,19 @@ const App: React.FC = () => {
                         <h4 className={`text-lg font-bold tracking-wide ${isLocked ? 'text-[#8a8fa3]' : 'text-[#5a5d8f]'}`}>
                           {config.title}
                         </h4>
-                        <div className={`mt-4 flex items-center gap-5 transition-all duration-1000 ${isLocked ? 'blur-locked' : ''}`}>
-                          <div className={`w-10 h-10 ${isLocked ? 'text-[#b0b4d4]' : shape.color.split(' ')[1]}`}>
+                        <div className={`mt-4 flex items-center gap-4 sm:gap-5 transition-all duration-1000 ${isLocked ? 'blur-locked' : ''}`}>
+                          {/* 調整圖形尺寸為 w-16，避免壓迫文字但保持清晰 */}
+                          <div className={`w-16 h-16 sm:w-14 sm:h-14 shrink-0 ${isLocked ? 'text-[#b0b4d4]' : shape.color.split(' ')[1]}`}>
                             {shape.icon}
                           </div>
                           <div className="flex flex-col">
                             <span className="text-[9px] text-[#b0b4d4] font-bold uppercase tracking-widest mb-1">{shape.name}</span>
-                            <span className="text-lg font-bold text-[#5a5d8f] leading-tight">{config.mappings[shapeId]}</span>
+                            <span className="text-base sm:text-lg font-bold text-[#5a5d8f] leading-tight">{config.mappings[shapeId]}</span>
                           </div>
                         </div>
                       </div>
                       {isLocked && (
-                        <div className="absolute right-6 bottom-6 opacity-30">
+                        <div className="absolute right-6 bottom-6 opacity-30 hidden sm:block">
                           <svg className="w-10 h-10 text-[#b0b4d4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                           </svg>
@@ -268,7 +268,7 @@ const App: React.FC = () => {
                 <p>此刻的覺察，已在潛意識播下種子。</p>
                 <p>完整的「2026 靈魂圖像報告」將為你解讀：</p>
                 <p>那些隱藏在排名背後，你的天賦、狀態、動力與內在覺察。</p>
-                <p>傳送靈魂代碼到居筆官方line，讓我們陪伴你開啟這段旅程。</p>
+                <p>探尋真實的內在，活出完整的人生，讓我們陪伴你開啟這段旅程。</p>
               </div>
 
               {/* 高亮操作說明 */}
@@ -293,9 +293,9 @@ const App: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})` }}
-                className="flex items-center justify-center text-white w-full py-5 px-4 md:px-10 rounded-full font-bold text-[15px] xs:text-base md:text-xl whitespace-nowrap hover:brightness-105 transition-all active:scale-[0.98] shadow-[0_15px_30px_rgba(142,148,242,0.3)]"
+                className="flex items-center justify-center text-white w-full py-6 px-8 md:px-12 rounded-full font-bold text-[15px] xs:text-[17px] sm:text-[19px] md:text-2xl whitespace-nowrap hover:brightness-105 transition-all active:scale-[0.98] shadow-[0_15px_30px_rgba(142,148,242,0.3)]"
               >
-                前往居筆 Line@ 免費獲獲完整報告
+                前往居筆 LINE@ 免費獲取完整報告
               </a>
             </div>
 
