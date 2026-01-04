@@ -266,8 +266,10 @@ const App: React.FC = () => {
               <p className="text-[#8c91b5] text-sm mb-10 leading-relaxed font-light">
                 此刻的覺察，已在潛意識播下種子。<br />
                 完整的「2026 靈魂圖像報告」將為你解讀：<br />
-                那些隱藏在排名背後，你的天賦、狀態、動力與內在覺察。<br />
-                傳送靈魂代碼到居筆官方line，讓我們陪伴你開啟這段旅程。
+                那些隱藏在排名背後，你的天賦、狀態、動力與內在覺察。<br /><br />
+                
+                <strong>請牢記你的代碼，點擊下方按鈕加Line<br />
+                然後傳送「報告」即可查看專屬解析報告！</strong>
               </p>
               <div className="bg-white/80 backdrop-blur-sm py-5 px-10 rounded-[2rem] border border-[#8e94f2]/10 mb-10 inline-block">
                 <span className="text-[9px] text-[#b0b4d4] block mb-2 uppercase tracking-[0.4em]">Inner ID</span>
