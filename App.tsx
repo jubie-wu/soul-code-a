@@ -237,13 +237,13 @@ const App: React.FC = () => {
                         <h4 className={`text-lg font-bold tracking-wide ${isLocked ? 'text-[#8a8fa3]' : 'text-[#5a5d8f]'}`}>
                           {config.title}
                         </h4>
-                        {/* 渲染順位副標說明 - 調整文字大小為 text-[13px] 以提升手機閱讀舒適度 */}
+                        {/* 渲染順位副標說明 */}
                         <p className={`text-[13px] mt-1.5 font-normal leading-relaxed ${isLocked ? 'text-[#b0b4d4]' : 'text-[#8c91b5]'}`}>
                           {config.description}
                         </p>
                         
                         <div className={`mt-4 flex items-center gap-4 sm:gap-5 transition-all duration-1000 ${isLocked ? 'blur-locked' : ''}`}>
-                          <div className={`w-16 h-16 sm:w-14 sm:h-14 shrink-0 ${isLocked ? 'text-[#b0b4d4]' : shape.color.split(' ')[1]}`}>
+                          <div className={`w-12 h-12 sm:w-14 sm:h-14 shrink-0 ${isLocked ? 'text-[#b0b4d4]' : shape.color.split(' ')[1]}`}>
                             {shape.icon}
                           </div>
                           <div className="flex flex-col">
@@ -280,8 +280,10 @@ const App: React.FC = () => {
                 <div className="absolute -top-3 left-6 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-[#8e94f2] border border-[#8e94f2]/20 shadow-sm uppercase tracking-widest">
                   Action Steps
                 </div>
-                <div className="text-[#5a5d8f] text-sm leading-relaxed space-y-1">
-                  <p>請牢記你的代碼，點擊下方按鈕加 Line</p>
+                {/* 調整斷行 */}
+                <div className="text-[#5a5d8f] text-sm leading-relaxed space-y-4">
+                  <p>請牢記或截圖你的代碼</p>
+                  <p>點擊下方按鈕加 Line</p>
                   <p>然後傳送<span className="font-bold text-[#8e94f2] bg-white px-2 py-0.5 rounded mx-1">「報告」</span></p>
                   <p>即可查看專屬解析報告</p>
                 </div>
