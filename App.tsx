@@ -277,14 +277,14 @@ const App: React.FC = () => {
 
               {/* 高亮操作說明 */}
               <div className="bg-[#f0f2ff] rounded-2xl p-6 mb-10 border border-[#8e94f2]/20 relative">
-                <div className="absolute -top-3 left-6 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-[#8e94f2] border border-[#8e94f2]/20 shadow-sm uppercase tracking-widest">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-[#8e94f2] border border-[#8e94f2]/20 shadow-sm uppercase tracking-widest whitespace-nowrap">
                   Action Steps
                 </div>
                 {/* 調整斷行 */}
                 <div className="text-[#5a5d8f] text-sm leading-relaxed space-y-4">
                   <p>請牢記或截圖你的代碼</p>
                   <p>點擊下方按鈕加 Line</p>
-                  <p>然後傳送<span className="font-bold text-[#8e94f2] bg-white px-2 py-0.5 rounded mx-1">「報告」</span></p>
+                  <p>然後傳送<span className="font-bold text-[#8e94f2] bg-white px-2 py-0.5 rounded mx-1">報告</span></p>
                   <p>即可查看專屬解析報告</p>
                 </div>
               </div>
