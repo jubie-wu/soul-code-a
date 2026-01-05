@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShapeId, Stage } from './types';
 import { SHAPES, RANK_CONFIG, LINE_LINK } from './constants';
 
 const App: React.FC = () => {
   const [stage, setStage] = useState<Stage>('intro');
   const [selection, setSelection] = useState<ShapeId[]>([]);
+
+  // 當切換階段時自動置頂，確保使用者能看到完整頁面
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [stage]);
 
   // 夢幻色調配置
   const primaryColor = "#8e94f2"; // 夢幻紫
