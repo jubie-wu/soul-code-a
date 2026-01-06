@@ -285,12 +285,17 @@ const App: React.FC = () => {
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-[#8e94f2] border border-[#8e94f2]/20 shadow-sm uppercase tracking-widest whitespace-nowrap">
                   Action Steps
                 </div>
-                {/* 調整斷行 */}
+                {/* 調整斷行與強調內容 */}
                 <div className="text-[#5a5d8f] text-sm leading-relaxed space-y-4">
                   <p>請牢記或截圖你的代碼</p>
                   <p>點擊下方按鈕加 Line</p>
-                  <p>然後傳送<span className="font-bold text-[#8e94f2] bg-white px-2 py-0.5 rounded mx-1">報告</span></p>
-                  <p>即可查看專屬解析報告</p>
+                  <p>
+                    然後傳送 <span className="text-3xl font-black text-[#8e94f2] bg-white px-4 py-1.5 rounded-xl mx-1 shadow-sm inline-block transform scale-110">報告</span> 兩個字到對話
+                  </p>
+                  <div className="space-y-1">
+                    <p>即可查看專屬解析報告</p>
+                    <p className="text-[11px] opacity-60">（傳送數字是看不到的喔）</p>
+                  </div>
                 </div>
               </div>
 
