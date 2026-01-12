@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShapeId, ShapeInfo, RankData } from './types';
+import { ShapeId, ShapeInfo, RankData } from './types.ts';
 
 export const SHAPES: ShapeInfo[] = [
   { 
@@ -94,7 +94,7 @@ export const RANK_CONFIG: RankData[] = [
     mappings: {
       circle: '徹底的獨處與封閉空間，能讓你的感官與思緒得到洗滌',
       triangle: '設立並達成一個微小的明確目標，能瞬間點燃你的成就感燃料',
-      square: '規律的生活節奏與可預測的環境，能讓你的神經系統深度放鬆',
+      square: '規規的生活節奏與可預測的環境，能讓你的神經系統深度放鬆',
       spiral: '打破常規的新鮮體驗與知識碰撞，能喚醒你幾乎熄滅的生命熱情',
       cross: '一場具質感的深度對談或團隊歸屬感，能為你提供持久的溫度'
     }

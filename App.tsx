@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ShapeId, Stage } from './types';
-import { SHAPES, RANK_CONFIG, LINE_LINK } from './constants';
+import { ShapeId, Stage } from './types.ts';
+import { SHAPES, RANK_CONFIG, LINE_LINK } from './constants.tsx';
 
 const App: React.FC = () => {
   const [stage, setStage] = useState<Stage>('intro');
@@ -113,7 +113,7 @@ const App: React.FC = () => {
                 </div>
               ))}
             </div>
-            <h2 className="text-2xl font-medium text-[#5a5d8f] mb-6">直覺圖像測驗<br/><span className="text-lg opacity-60">覺察 2026 的內在動能</span></h2>
+            <h2 className="text-2xl font-medium text-[#5a5d8f] mb-6">超準直覺圖像測驗<br/><span className="text-lg opacity-60">覺察 2026 的內在動能</span></h2>
             <div className="text-[#8c91b5] mb-10 leading-relaxed font-light px-2 space-y-4 text-sm">
               <p>這不僅是一次測驗，更是一場關於圖像投射的潛意識覺察。</p>
               <p>請依照你的「直覺喜好度」進行排序：</p>
